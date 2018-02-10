@@ -237,7 +237,11 @@ public class Robot extends SampleRobot {
 			//Sets speed to half when side button is held, for fine control
 			if(driverStick.getRawButton(1)){
 				speedModifierX = 0.7;
-				speedModifierY = -0.7;			
+				speedModifierY = -0.7;	
+				
+			/*for adjusting direction when driving forward/back
+			  SmartDashboard.putNumber(   "IMU_CompassHeading",   ahrs.getCompassHeading());
+			                    */
 			}
 
 
