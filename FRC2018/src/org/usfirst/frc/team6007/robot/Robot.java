@@ -155,81 +155,76 @@ public class Robot extends TimedRobot {
 				  
 			  break;
 			  case 1:                       //position 1 (left) going to left side
-				  			//to do adjust values using NavX
-				  			//to do configure boxlifter				  
-				  
-				  driveBase.tankDrive(0.8, 0.8);  //drives straight
-				  delay(0.5);			  //for 0.5 seconds	
-				  boxLifter.liftUp(-0.6);	  //lifts the arm up
-				  delay(0.1);			  //for 0.1 seconds
-				  boxGrabber.spitOut(1);	  //spits the cube out	
-				  delay(0.5);			  //for 0.5 seconds
-
-			  break;
-			  case 2:                       //center position (2) going to left side
-				  			//to do adjust values using NavX
-				  			//to do configure boxlifter				 
-				  driveBase.tankDrive(0.8, 0.8);  //drives straight
-				  delay(0.3);                     //for 0.3 seconds
-				  driveBase.tankDrive(-0.5, 0.5); //turns left
-				  delay(0.1);			  //for 0.2 seconds
-				  driveBase.tankDrive(0.6, 0.6);  //drives straight
-				  delay(0.2);			  //for 0.3 seconds	  
-				  boxLifter.liftUp(-0.6);	  //lifts the arm up
-				  delay(0.1);			  //for 0.1 seconds
-				  boxGrabber.spitOut(1);	  //spits the cube out	
-				  delay(0.5);			  //for 0.5 seconds				  
-
-			  break;
-			  case 3:                       //position 3 (right) going to left side
-				  			//to do adjust values using NavX
-				  			//to do configure boxlifter				
-				  driveBase.tankDrive(0.8, 0.8);  //drives straight
-				  delay(0.9);                     //for 0.9 seconds
-				  driveBase.tankDrive(-0.5, 0.5); //turns left
-				  delay(0.2);			  //for 0.2 seconds
-				  driveBase.tankDrive(0.8, 0.8);  //drives straight
-				  delay(1.1);                     //for 1.1 seconds
-				  driveBase.tankDrive(-0.5, 0.5); //turns left
-				  delay(0.2);			  //for 0.2 seconds
-				  driveBase.tankDrive(0.6, 0.6);  //drives straight
-				  delay(0.2);			  //for 0.2 seconds	
-				  boxLifter.liftUp(-0.6);	  //lifts the arm up
-				  delay(0.1);			  //for 0.1 seconds
-				  boxGrabber.spitOut(1);	  //spits the cube out	
-				  delay(0.5);			  //for 0.5 seconds				  
-
-			  break;  
-			  default: 
-				  
-			  break;
-		  }
-		} 
-		else {
-		  switch(startPos){
-			  case 0:                       //position 3 (right) going to right side
-				  //drive forward 
-				  //turn right 90
-				  //drive forward 
-				  //drop cube
-				  break;
-			  case 1:                       //position 3 (right) going to right side
 				  //drive forward
 				  //drop cube
-				  break;
-			  case 2:                       //center position (2) going to right side
+			  break;
+			  case 2:                       //center position (2) going to left side
 				  //drive forward
 				  //turn 45
 				  //drive forward
 				  //drop cube
-				  break;
-			  case 3:                       //position 1 (left) going to right side
+			  break;
+			  case 3:                       //position 3 (right) going to left side
 				 //drive forward
 				 //turn left 90
 				 //drive forward
 				 //turn left 90
 				 //drive forward
 				 //drop cube
+			  break;
+			  default: 
+			  break;
+		  }
+		} 
+		else {
+		  switch(startPos){
+			  case 0:                                       //position 3 (right) going to right side
+				  driveBase.tankDrive(0.8, 0.8);        //drive forward 
+				  delay(1.5);                           //for 1.5 secs 
+				  driveBase.tankDrive(0.5, -0.5);       //turn right (try for 90 degrees)
+				  delay(0.2)                            //for .2 secs
+				  driveBase.tankDrive(0.6, 0.6);        //drive forward 
+				  delay(0.2);                           //for .2 secs
+				  boxLifter.liftUp(-0.6);	        //lift arm
+				  delay(0.1);			       //for .1 seconds
+				  boxGrabber.spitOut(1);	        //spit out cube
+				  delay(0.5);			        //for .5 seconds
+				  break;
+			  case 1:                                 //position 3 (right) going to right side
+				  driveBase.tankDrive(0.8, 0.8);  //drive forward 
+				  delay(1);                       //for 1 sec
+				  boxLifter.liftUp(-0.6);	  //lifts the arm up
+				  delay(0.1);			  //for 0.1 seconds
+				  boxGrabber.spitOut(1);	  //spits the cube out	
+				  delay(0.5);			  //for 0.5 seconds
+				  break;
+			  case 2:                                   //center position (2) going to right side
+				  driveBase.tankDrive(0.8, 0.8);    //drive forward
+			          delay(0.5);                       //for .5 secs
+				  driveBase.tankDrive(0.5, -0.50;)  //turn right (try for 45 degrees)
+			          delay(0.1);                       //for .1 secs
+				  driveBase.tankDrive(0.8, 0.8);    //drive forward
+				  delay(0.5);                       //for .5 secs
+				  boxLifter.liftUp(-0.6);	    //lifts the arm up
+				  delay(0.1);			    //for 0.1 seconds
+				  boxGrabber.spitOut(1);	    //spits the cube out	
+				  delay(0.5);			    //for 0.5 seconds
+				  break;
+			  case 3:                                      //position 1 (left) going to right side
+				 driveBase.tankDrive(0.8, 0.8);        //drive forward 
+				 delay(2);                             //for 2 secs 
+				 driveBase.tankDrive(-0.5, 0.5);       //turn left (try for 90 degrees)
+				 delay(0.2);                           //for .2 secs
+				 driveBase.tankDrive(0.8, 0.8);        //drive forward 
+				 delay(2);                             //for 2.7 secs 
+				 driveBase.tankDrive(-0.5, 0.5);       //turn left (try for 90 degrees)
+				 delay(0.2)                            //for .2 secs
+				 driveBase.tankDrive(0.8, 0.8);        //drive forward 
+				 delay(0.3);                           //for .3 secs 
+				 boxLifter.liftUp(-0.6);	       //lifts the arm up
+				 delay(0.1);			       //for 0.1 seconds
+				 boxGrabber.spitOut(1);	               //spits the cube out	
+				 delay(0.5);			       //for 0.5 seconds
 				 break;
 			  
 			  default: 
