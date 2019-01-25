@@ -3,6 +3,7 @@
 *******************************************************/
 /***********************************
 *Arm that retrives and delivers disk
+*Editors Jordan, Daniel, Mr Legge
 ***********************************/
 package frc.robot;
 import edu.wpi.first.wpilibj.VictorSP;
